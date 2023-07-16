@@ -1,4 +1,4 @@
-*.xml
-Debug/
-*.atsln
 .vs/
+Debug/
+*.xml
+*.atsln
