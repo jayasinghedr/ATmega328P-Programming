@@ -1,8 +1,8 @@
 /*
  * ADC.c
  *
- * Created		:	16/07/2023 12:31:43
- * Author		:	User
+ * Created: 16/07/2023 13:41:24
+ * Author : User
  * Description	:	Using Analog-Digital Converter (ADC)
 					An analog voltage is read on the ADC1 pin and then an LED 
 					connected to PB2 pin is turned on if the voltage is above
