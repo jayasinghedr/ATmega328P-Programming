@@ -29,7 +29,6 @@ initialize_timer0_fast_pwm (void)
 	
 	/*interrupt mask register*/
 	TIMSK0 |= (1<<OCIE0A);	/*interrupt when TCNT0 = OCR0A*/ 
-	
 }
 
 #endif /* PWM_H_ */

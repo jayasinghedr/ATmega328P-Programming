@@ -17,11 +17,10 @@
 #include "adc.h"
 #include "pwm.h"
 
-volatile uint16_t reg1, reg2, adc_val;
+volatile uint16_t adc_val;
 
 int main(void)
 {
-	
 	initialize_adc();
 	initialize_timer0_fast_pwm();
     
@@ -41,9 +40,7 @@ ISR(ADC_vect)
 	 * reading ADCL first locks the access to data register until ADHC is read
 	 */
 	
-	reg1 = ADCL;
-	reg2 = ADCH;
-	adc_val = (reg2 << 8) + reg1;
+	adc_val = ADCL + (ADCH<<8);
 	
 	_delay_us(200);	/*conversion time for ADC is about 13 ADC clock-cycles*/
 }

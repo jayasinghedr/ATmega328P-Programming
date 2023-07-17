@@ -25,6 +25,4 @@ initialize_adc (void)
 	ADMUX |= (1<<MUX0);		/*select ADC1 as input channel*/
 }
 
-
-
 #endif /* ADC_H_ */
